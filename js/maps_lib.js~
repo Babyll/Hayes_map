@@ -147,7 +147,7 @@
                 where: whereClause
             },
             styleId: 2,
-            templateId: 2
+            templateId: 5 //setting this to the number in the url next to 'tmplt=' given by "Publish" on fusion tables, lets you use html from fusion tables
         });
         self.fusionTable = self.searchrecords;
         self.searchrecords.setMap(map);
@@ -220,10 +220,13 @@
         self.whereClause += " AND 'Date of Death' <= '" + $('#endDate').html() + "'";
         var fName_search = $("#fName_search").val().replace("'", "\\'");
         var lName_search = $("#lName_search").val().replace("'", "\\'");
+        var CoD_search = $("#CoD_search").val().replace("'", "\\'");
         if (fName_search != '')
             self.whereClause += " AND 'Name First' contains ignoring case '" + fName_search + "'";
         if (lName_search != '')
             self.whereClause += " AND 'Name Last' contains ignoring case '" + lName_search + "'";
+        if (CoD_search != '')
+            self.whereClause += " AND 'Cause of Death' contains ignoring case '" + CoD_search + "'";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {

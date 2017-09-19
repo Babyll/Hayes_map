@@ -9,6 +9,7 @@ a:hover { color: #4B58A6; }
   height: 15px; 
   width: 15px;  
   display: inline-block;
+  color: #777;
   *border-right-width: 2px;
   *border-bottom-width: 2px;
   -webkit-border-radius: 5px;
@@ -31,3 +32,10 @@ canvas {-ms-touch-action: double-tap-zoom;}
 .iframe #map_canvas { height: 500px; }
 .iframe .well { margin-bottom: 5px; }
 .iframe .alert { margin-top: 5px; }
+
+
+.googft-info-window {
+
+    color: #777;
+
+}
